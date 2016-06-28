@@ -5,3 +5,17 @@
     font-size: 28px;
 }
 p.sample4 {border-style: double;}
+
+.aicon{
+    content: "";
+    display:block ;
+    clear: both;
+}
+.a{
+    float: left;
+    width: 50%;
+}
+.b{
+    float: left;
+    width: 50%;
+}

@@ -21,3 +21,26 @@ p.sample4 {border-style: double;}
     margin-top:30px ;
 }
 
+
+#new dl{
+    margin: 0px 20px 0px;
+}
+#new dt {
+    font-weight: bold;
+    float: left;
+    width: 8em;
+}
+#new dd {
+    border-bottom: 1px solid #ccc;
+    padding-left: 8em;
+}
+
+#contents h2 {
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 4px solid #726043;
+    border-left: 1px solid #CCC;
+}
+.h2{
+
+}

@@ -17,56 +17,87 @@
             crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css.css" type="text/css">
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<div class="container" >
-    <h1 class="bg-info">各施設の混雑状況</h1>
+<div class="pure-container" data-effect="pure-effect-scaleRotate">
+    <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+    <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
-    <div class="aicon">
-        <div class="a">
-      <img src="uketuke.png"></div>
+    <nav class="pure-drawer" data-position="left">
+        <ul>
+            <br><br><br><br><br>　　　　　
 
-        <div class="b">
-       <p class="sample4" style="max-width: 350px;">
-           <span class="label label-success"> 受付・従業員出入り口　<br></span>
-           現在の混雑状況：やや混雑　<br>
-           待ち時間：約10分
-        　　　　</p>
-        </div>
-   </div>
+            <li><a href="yu-za-.html">ユーザー情報</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li> <a href="QR.html">入館・退館 QRコード</a></li>
+            <li><a href="list.html">出勤リスト</a></li>
+            <li> <a href="congestion.html">各施設の混雑状況</a></li>
 
-    <div class="aicon">
-        <div class="a">
-            <img src="レストラン.png"></div>
+        </ul>
+    </nav>
 
-        <div class="b">
-            <p class="sample4" style="max-width: 350px;">
-                <span class="label label-success">社員食堂　<br></span>
-                現在の混雑状況：混雑あり　<br>
-                待ち時間：約1時間
-                　　　　</p>
+    <div class="pure-pusher-container">
+        <div class="pure-pusher">
+            <div class="inner">
+
+                　　　　　　<!-- ここがコンテンツ -->
+
+                <div class="container" >
+                    <h1 class="bg-info">各施設の混雑状況</h1>
+
+                    <div class="aicon">
+                        <div class="a">
+                            <img src="uketuke.png"></div>
+
+                        <div class="b">
+                            <p class="sample4" style="max-width: 350px;">
+                                <span class="label label-success"> 受付・従業員出入り口　<br></span>
+                                現在の混雑状況：やや混雑　<br>
+                                待ち時間：約10分
+                                　　　　</p>
+                        </div>
+                    </div>
+
+                    <div class="aicon">
+                        <div class="a">
+                            <img src="レストラン.png"></div>
+
+                        <div class="b">
+                            <p class="sample4" style="max-width: 350px;">
+                                <span class="label label-success">社員食堂　<br></span>
+                                現在の混雑状況：混雑あり　<br>
+                                待ち時間：約1時間
+                                　　　　</p>
+                        </div>
+                    </div>
+
+                    <div class="aicon">
+                        <div class="a">
+                            <img src="喫煙所.png"></div>
+
+                        <div class="b">
+                            <p class="sample4" style="max-width: 350px;">
+                                <span class="label label-success">喫煙所　<br></span>
+                                現在の混雑状況：混雑なし　<br>
+                                待ち時間：約0分
+                                　　　　</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <p class="text-right">
+                    <br><br>
+                    <a href="SA.html" class="btn btn-primary">ホーム</a>
+                </p>
+
+            </div>
         </div>
     </div>
-
-    <div class="aicon">
-        <div class="a">
-            <img src="喫煙所.png"></div>
-
-        <div class="b">
-            <p class="sample4" style="max-width: 350px;">
-                <span class="label label-success">喫煙所　<br></span>
-                現在の混雑状況：混雑なし　<br>
-                待ち時間：約0分
-                　　　　</p>
-        </div>
-    </div>
-
-
-
+    <!-- ボタンの位置をleft,top,rightから選べます。 -->
+    <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
 </div>
-<p class="text-right">
-   <br><br>
-    <a href="SA.html" class="btn btn-primary">ホーム</a>
-</p>
 </body>
 </html>

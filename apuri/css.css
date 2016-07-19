@@ -9,13 +9,11 @@ p.m{
     color: #66ff66;
 }
 
-.btn-info{width:auto}
-.btn-success{
-    width: auto;
-}
+
 .btn-primary{
     width: 280px;
-    left: 50%;
+    text-align: center;
+    vertical-align: top;
 }
 
 .pure-drawer li a {

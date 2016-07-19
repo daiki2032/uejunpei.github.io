@@ -1,10 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
- <img src=“http://uejunpei.github.io/160510/images/sample.jpg”>
-</body>
-</html>
+#include <stdio.h>
+
+    #define True -1
+    #define False 0
+
+    #define N 9
+    #define N3 3
+
+    /* 盤の出力 */
+    int PrintBan(int Ban[N][N])
+    {
+    int i,j;
+    for(i=0;i<N;i++)
+    {
+    for(j=0;j<N;j++) printf("%5d",Ban[i][j]);
+    putchar('\n');
+    }
+    putchar('\n');
+    return 0;
+    }
+
+    /* 空いた枡を見つける */
+    int findBlank(int *x,int *y,int Ban[N][N])
+    {
+    int i,j;
+    for(i=0;i<N;i++)
+    for(j=0;j<N;j++)
+    if (Ban[i][j] == 0)
+    {
+    *x=i; *y=j;
+    return True;
+    }
+    return False;
+    }
+
+    /* kを枡(x,y)に置けるか ? */
+    int isOkeru(int x,int y,int k,int Ban[N][N])
+    {
+    int i,j;
+
+    for(i=0;i<N;i++) if (Ban[i][y] == k) return False; /* 横に同じ数はないか */
+    for(j=0;j<N;j++) if (Ban[x][j] == k) return False; /* 縦に同じ数はないか */
+    for(i=0;i<N3;i++)                                  /* blockに同じ数はないか */
+    for(j=0;j<N3;j++)
+    if (Ban[N3*(x/N3)+i][N3*(y/N3)+j] == k) return False;
+    return True;
+    }
+
+    /* これが問題のバックトラック */
+    int Try(int Ban[N][N])
+    {
+    int x,y,k;
+    if (findBlank(&x,&y,Ban)) /* 盤に空いた枡(x,y)があるか */
+    for(k=1;k<=N;k++)
+    {
+    if(isOkeru(x,y,k,Ban)) /* 枡(x,y)にkを置けるか */
+    {
+    Ban[x][y] = k; /* 置けるなら置く */
+    Try(Ban);      /* 次を確かめる */
+    Ban[x][y] = 0; /* 枡(x,y)にkを置けないとして別の置き方はないか */
+    }
+    }
+    else
+    {
+    printf("Solution\n"); /* 解が見つかった */
+    PrintBan(Ban);
+    }
+    return 0;
+    }
+
+    int main(int argc,char *argv[])
+    {
+    int i,j,Ban[N][N];
+    FILE *stream;
+
+    if (argc != 2)
+    {
+    printf("\nusage : Sudoku filename\n\n");
+    return 1;
+    }
+    if((stream = fopen(argv[1],"r")) == NULL)
+    {
+    printf("%s がありません。\n",argv[1]);
+    return 1;
+    }
+    for (i=0;i<N;i++)
+    for(j=0;j<N;j++) fscanf(stream,"%d",&Ban[i][j]);
+    fclose(stream);
+    printf("Problem\n");
+    PrintBan(Ban);
+    Try(Ban);
+    return 0;
+    }

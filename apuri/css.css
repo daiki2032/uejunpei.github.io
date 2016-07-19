@@ -9,9 +9,9 @@ p.m{
     color: #66ff66;
 }
 
-.btn-info{width: 40%}
+.btn-info{width:auto}
 .btn-success{
-    width: 40%;
+    width: auto;
 }
 .btn-primary{
     width: 280px;

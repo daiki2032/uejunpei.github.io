@@ -16,20 +16,51 @@
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
 
 </head>
 <body>
-<p class="left">
-    <img src="Asann.png"></p>
-<div class="container" >
+<div class="pure-container" data-effect="pure-effect-scaleRotate">
+    <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+    <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
-    <p class="text-left">
-        <a href="#" class="btn btn-warning">電話　0123456789</a>
-        <a href="#" class="btn btn-warning">メール　Asann@edu.teu.ac.jp</a>
-    </p>
-    <p class="text-right">
-        <a href="SA.html" class="btn btn-primary">ホーム</a>
-    </p>
+    <nav class="pure-drawer" data-position="left">
+        <ul>
+            <br><br><br><br><br>　　　　　
 
+            <li><a href="yu-za-.html">ユーザー情報</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li> <a href="QR.html">入館・退館 QRコード</a></li>
+            <li><a href="list.html">出勤リスト</a></li>
+            <li> <a href="congestion.html">各施設の混雑状況</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="pure-pusher-container">
+        <div class="pure-pusher">
+            <div class="inner">
+
+                　　　　　　<!-- ここがコンテンツ -->
+
+                <p class="left">
+                    <img src="Asann.png"></p>
+                <div class="container" >
+
+                    <p class="text-left">
+                        <a href="#" class="btn btn-warning">電話　0123456789</a>
+                        <a href="#" class="btn btn-warning">メール　Asann@edu.teu.ac.jp</a>
+                    </p>
+                    <p class="text-right">
+                        <a href="SA.html" class="btn btn-primary">ホーム</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ボタンの位置をleft,top,rightから選べます。 -->
+    <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
 </div>
 </body>

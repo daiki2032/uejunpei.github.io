@@ -9,6 +9,14 @@ p.m{
     color: #66ff66;
 }
 
+.btn-primary{
+    width: 350px;
+}
+
+.pure-drawer li a {
+    color: white;
+}
+
 p.sample4 {border-style: double;}
 
 .aicon{

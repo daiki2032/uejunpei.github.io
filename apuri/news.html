@@ -21,23 +21,53 @@
 <body>
 
 
-<section id="new">
-    <h1 class="bg-info">お知らせ</h1>
-    <dl>
-        <dt>2016/07/08</dt>
-        <dd>健康診断のお知らせ。</dd>
-        <dt>2016/07/06</dt>
-        <dd><店長>7月20日までに8月のシフトの提出をお願いします。</dd>
-        <dt>2016/07/05</dt>
-        <dd>店舗からあなた宛てに連絡があります。</dd>
-        <dt>2016/07/01</dt>
-        <dd>登録完了です。</dd>
-    </dl>
+<div class="pure-container" data-effect="pure-effect-scaleRotate">
+    <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+    <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
-</section>
-<br>
-<p class="text-right">
-    <a href="SA.html" class="btn btn-primary">ホーム</a>
-</p>
+    <nav class="pure-drawer" data-position="left">
+        <ul>
+            <br><br><br><br><br>　　　　　
+
+            <li><a href="yu-za-.html">ユーザー情報</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li> <a href="QR.html">入館・退館 QRコード</a></li>
+            <li><a href="list.html">出勤リスト</a></li>
+            <li> <a href="congestion.html">各施設の混雑状況</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="pure-pusher-container">
+        <div class="pure-pusher">
+            <div class="inner">
+
+                　　　　　　<!-- ここがコンテンツ -->
+
+                <section id="new">
+                    <h1 class="bg-info">お知らせ</h1>
+                    <dl>
+                        <dt>2016/07/08</dt>
+                        <dd>健康診断のお知らせ。</dd>
+                        <dt>2016/07/06</dt>
+                        <dd><店長>7月20日までに8月のシフトの提出をお願いします。</dd>
+                        <dt>2016/07/05</dt>
+                        <dd>店舗からあなた宛てに連絡があります。</dd>
+                        <dt>2016/07/01</dt>
+                        <dd>登録完了です。</dd>
+                    </dl>
+
+                </section>
+                <br>
+                <p class="text-right">
+                    <a href="SA.html" class="btn btn-primary">ホーム</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!-- ボタンの位置をleft,top,rightから選べます。 -->
+    <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+</div>
 </body>
 </html>

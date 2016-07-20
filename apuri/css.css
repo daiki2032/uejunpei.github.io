@@ -8,7 +8,34 @@ p.m{
     font-size:10;
     color: #66ff66;
 }
-
+#social-icon a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    float: left;
+    width:100px;
+    margin: 0 10px 10px 0;
+    padding: 0;
+    background: #c6bb80;
+    color: #fff;
+    text-decoration: none;
+    text-align:center;
+    line-height: 40px;
+}
+#social-icon i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    background: #bcaf68;
+    line-height: 40px;
+    text-align: center;
+    transition: .3s;
+}
+#social-icon i:before { padding 0; line-height: 40px; }
+#social-icon a:hover i { left: 100%; background: #b2a251; }
 
 
 .btn-primary{
